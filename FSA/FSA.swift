@@ -16,9 +16,21 @@ class FSA {
     if states.isEmpty {
       fatalError("FSA must have atleast one state")
     }
-    
     self.states = states
     self.state = states.first!
+  }
+  
+  convenience init(pseudos: [Pseudo]){
+    var states = [State]()
+    for (i, _) in pseudos.enumerate() {
+      states.append(State(n: i))
+    }
+    for (i, input) in pseudos.enumerate() {
+      states[i].t0 = states[input.t0]
+      states[i].t1 = states[input.t1]
+      states[i].accept = input.accept
+    }
+    self.init(states: states)
   }
   
   func resetState() {

@@ -14,7 +14,7 @@ main:
     print("-----------------------")
     
     //TODO: Input should be editable ie. states can be amened if need be
-    //TODO: Take inout from a file.
+    //TODO: Take input from a file.
     
     var inputs = [Pseudo]()
     var largestTransition = 0 //Holds how many more states to be made.
@@ -25,7 +25,14 @@ main:
         continue
       }
       
-      //TODO: Use regex here, given a bad input the program will most likely crash, this needs to be handled.
+      let regex = try! NSRegularExpression(pattern: "^([0-9]+) ([0-9]+)( \\*)?$", options: .CaseInsensitive)
+      let matches = regex.matchesInString(str, options: [], range: NSMakeRange(0, str.characters.count))
+      
+      if matches.count != 1 {
+        print("Issue with string format.")
+        continue
+      }
+      
       let tokens = str.componentsSeparatedByString(" ")
       let t0 = Int(tokens[0])!, t1 = Int(tokens[1])!
       let accepting = tokens.contains("*")
@@ -37,18 +44,8 @@ main:
       }
     }
     
-    //We need to create all the states first before we assign to them as each transition is a reference.
-    //TODO: This could be improved for example, intit a machine with number of states, then pass in array of Pseduo to init states correctly.
-    var states = [State]()
-    for (i, _) in inputs.enumerate() {
-      states.append(State(n: i))
-    }
-    for (i, input) in inputs.enumerate() {
-      states[i].t0 = states[input.t0]
-      states[i].t1 = states[input.t1]
-      states[i].accept = input.accept
-    }
-    let machine = FSA(states: states)
+    //We need to create all the states first before we assign to them since each transition is a reference.
+    let machine = FSA(pseudos: inputs)
     
     let eqStates = machine.eqStates()
     print("Equivalent States: \(eqStates.count)")
@@ -68,11 +65,10 @@ main:
         continue main
       }
       
-      let invalid = str.characters.contains({ (c: Character) in
-        let s = String(c)
-        return s != String(0) && s != String(1) //TODO: Regex!!!!
-      })
-      if invalid {
+      let regex = try! NSRegularExpression(pattern: "^(0|1)*$", options: .CaseInsensitive)
+      let matches = regex.matchesInString(str, options: [], range: NSMakeRange(0, str.characters.count))
+      
+      if matches.count != 1 {
         print("Invalid string!")
         continue
       }

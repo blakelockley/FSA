@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D736FB991CA926A10003D1FF /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D736FB981CA926A10003D1FF /* State.swift */; };
+		D780C71D1CD17E17004FDD41 /* StringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D780C71C1CD17E17004FDD41 /* StringExtention.swift */; };
+		D79AB29D1CD8A4CF00662AB7 /* RegexParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79AB29C1CD8A4CF00662AB7 /* RegexParser.swift */; };
 		D7FB1A761CA654E300D309BA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FB1A751CA654E300D309BA /* main.swift */; };
 		D7FB1A7D1CA654EC00D309BA /* FSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FB1A7C1CA654EC00D309BA /* FSA.swift */; };
 		D7FB1AA41CA687F000D309BA /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FB1AA31CA687F000D309BA /* Input.swift */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		D736FB981CA926A10003D1FF /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		D780C71C1CD17E17004FDD41 /* StringExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtention.swift; sourceTree = "<group>"; };
+		D79AB29C1CD8A4CF00662AB7 /* RegexParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexParser.swift; sourceTree = "<group>"; };
 		D7FB1A721CA654E300D309BA /* FSA */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FSA; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7FB1A751CA654E300D309BA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D7FB1A7C1CA654EC00D309BA /* FSA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSA.swift; sourceTree = "<group>"; };
@@ -66,7 +70,9 @@
 				D7FB1A751CA654E300D309BA /* main.swift */,
 				D7FB1A7C1CA654EC00D309BA /* FSA.swift */,
 				D736FB981CA926A10003D1FF /* State.swift */,
+				D79AB29C1CD8A4CF00662AB7 /* RegexParser.swift */,
 				D7FB1AA31CA687F000D309BA /* Input.swift */,
+				D780C71C1CD17E17004FDD41 /* StringExtention.swift */,
 			);
 			path = FSA;
 			sourceTree = "<group>";
@@ -130,6 +136,8 @@
 			files = (
 				D7FB1AA41CA687F000D309BA /* Input.swift in Sources */,
 				D7FB1A7D1CA654EC00D309BA /* FSA.swift in Sources */,
+				D79AB29D1CD8A4CF00662AB7 /* RegexParser.swift in Sources */,
+				D780C71D1CD17E17004FDD41 /* StringExtention.swift in Sources */,
 				D7FB1A761CA654E300D309BA /* main.swift in Sources */,
 				D736FB991CA926A10003D1FF /* State.swift in Sources */,
 			);
