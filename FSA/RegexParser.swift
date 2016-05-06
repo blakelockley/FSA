@@ -27,6 +27,8 @@ indirect enum Expression {
     return matches.count == 1
   }
   
+  ///If expression has opening and closing prans as the first and last charcter, they will be removed
+  ///E.g. (01) -> 01
   private static func stripParans(inout str: String) {
     if matchInPattern("^\\(.*\\)$", forString: str) {
       str.removeAtIndex(str.startIndex)
@@ -36,8 +38,6 @@ indirect enum Expression {
   
   static func new(str: String) -> Expression {
     var str = str
-    
-    //Expressions inside parans are much like the clothes on a beautiful woman and are much better stripped off.
     stripParans(&str)
     
     if str == "0" {
