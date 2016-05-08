@@ -10,6 +10,8 @@
 		D736FB991CA926A10003D1FF /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D736FB981CA926A10003D1FF /* State.swift */; };
 		D780C71D1CD17E17004FDD41 /* StringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D780C71C1CD17E17004FDD41 /* StringExtention.swift */; };
 		D79AB29D1CD8A4CF00662AB7 /* RegexParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79AB29C1CD8A4CF00662AB7 /* RegexParser.swift */; };
+		D7A2AE781CDC8C2F00476AB6 /* NDState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2AE771CDC8C2F00476AB6 /* NDState.swift */; };
+		D7A2AE801CDEBF2D00476AB6 /* NDBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2AE7F1CDEBF2D00476AB6 /* NDBuilder.swift */; };
 		D7FB1A761CA654E300D309BA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FB1A751CA654E300D309BA /* main.swift */; };
 		D7FB1A7D1CA654EC00D309BA /* FSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FB1A7C1CA654EC00D309BA /* FSA.swift */; };
 		D7FB1AA41CA687F000D309BA /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FB1AA31CA687F000D309BA /* Input.swift */; };
@@ -31,6 +33,8 @@
 		D736FB981CA926A10003D1FF /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		D780C71C1CD17E17004FDD41 /* StringExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtention.swift; sourceTree = "<group>"; };
 		D79AB29C1CD8A4CF00662AB7 /* RegexParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexParser.swift; sourceTree = "<group>"; };
+		D7A2AE771CDC8C2F00476AB6 /* NDState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDState.swift; sourceTree = "<group>"; };
+		D7A2AE7F1CDEBF2D00476AB6 /* NDBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDBuilder.swift; sourceTree = "<group>"; };
 		D7FB1A721CA654E300D309BA /* FSA */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FSA; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7FB1A751CA654E300D309BA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D7FB1A7C1CA654EC00D309BA /* FSA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSA.swift; sourceTree = "<group>"; };
@@ -48,6 +52,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7A2AE791CDEB7F900476AB6 /* Regex */ = {
+			isa = PBXGroup;
+			children = (
+				D79AB29C1CD8A4CF00662AB7 /* RegexParser.swift */,
+			);
+			name = Regex;
+			sourceTree = "<group>";
+		};
+		D7A2AE7A1CDEB81000476AB6 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				D7FB1AA31CA687F000D309BA /* Input.swift */,
+				D780C71C1CD17E17004FDD41 /* StringExtention.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		D7A2AE7D1CDEB83900476AB6 /* FSA */ = {
+			isa = PBXGroup;
+			children = (
+				D7FB1A7C1CA654EC00D309BA /* FSA.swift */,
+				D736FB981CA926A10003D1FF /* State.swift */,
+			);
+			name = FSA;
+			sourceTree = "<group>";
+		};
+		D7A2AE7E1CDEB84500476AB6 /* NDFSA */ = {
+			isa = PBXGroup;
+			children = (
+				D7A2AE771CDC8C2F00476AB6 /* NDState.swift */,
+				D7A2AE7F1CDEBF2D00476AB6 /* NDBuilder.swift */,
+			);
+			name = NDFSA;
+			sourceTree = "<group>";
+		};
 		D7FB1A691CA654E300D309BA = {
 			isa = PBXGroup;
 			children = (
@@ -68,11 +107,10 @@
 			isa = PBXGroup;
 			children = (
 				D7FB1A751CA654E300D309BA /* main.swift */,
-				D7FB1A7C1CA654EC00D309BA /* FSA.swift */,
-				D736FB981CA926A10003D1FF /* State.swift */,
-				D79AB29C1CD8A4CF00662AB7 /* RegexParser.swift */,
-				D7FB1AA31CA687F000D309BA /* Input.swift */,
-				D780C71C1CD17E17004FDD41 /* StringExtention.swift */,
+				D7A2AE7D1CDEB83900476AB6 /* FSA */,
+				D7A2AE7E1CDEB84500476AB6 /* NDFSA */,
+				D7A2AE791CDEB7F900476AB6 /* Regex */,
+				D7A2AE7A1CDEB81000476AB6 /* Utility */,
 			);
 			path = FSA;
 			sourceTree = "<group>";
@@ -137,6 +175,8 @@
 				D7FB1AA41CA687F000D309BA /* Input.swift in Sources */,
 				D7FB1A7D1CA654EC00D309BA /* FSA.swift in Sources */,
 				D79AB29D1CD8A4CF00662AB7 /* RegexParser.swift in Sources */,
+				D7A2AE801CDEBF2D00476AB6 /* NDBuilder.swift in Sources */,
+				D7A2AE781CDC8C2F00476AB6 /* NDState.swift in Sources */,
 				D780C71D1CD17E17004FDD41 /* StringExtention.swift in Sources */,
 				D7FB1A761CA654E300D309BA /* main.swift in Sources */,
 				D736FB991CA926A10003D1FF /* State.swift in Sources */,

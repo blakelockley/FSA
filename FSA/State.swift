@@ -14,8 +14,8 @@ typealias Pseudo = (t0: Int, t1: Int, accept: Bool)
 ///State Represents the internal state of a FSA
 class State: Equatable, CustomStringConvertible {
   let n: Int
-  weak var t0: State!
-  weak var t1: State!
+  var t0: State!
+  var t1: State!
   var accept: Bool!
   
   init(n: Int) {

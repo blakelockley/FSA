@@ -8,6 +8,10 @@
 
 import Foundation
 
+let regex = "(1|0)"
+let exp = Expression.new(regex)
+let states = NDBuilder.NDStatesFromRegex(exp)
+
 main:
   while true {
     print("Creating new FSA  0 1 *")
